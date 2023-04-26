@@ -1,3 +1,6 @@
+# SLACK_BOT_TOKEN=xoxb-***
+# SLACK_APP_TOKEN=xapp-***
+
 import os
 
 from slack_bolt import App
