@@ -2,7 +2,7 @@ frameworkVersion: '3'
 service: aws-lambda-app-slack
 provider:
   name: aws
-  runtime: python3.9
+  runtime: python3.10
   region: ap-northeast-1
   profile: data-root-user
   iam:
@@ -13,7 +13,6 @@ provider:
             - lambda:InvokeFunction
             - lambda:InvokeAsync
           Resource: "*"
-        - Effect: Allow
   environment:
     SERVERLESS_STAGE: ${opt:stage, 'prod'}
     SLACK_SIGNING_SECRET: ${env:SLACK_SIGNING_SECRET}
